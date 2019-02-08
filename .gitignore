@@ -10,4 +10,4 @@ docs/
 demos/
 generated_src
 *.log
-
+.idea/

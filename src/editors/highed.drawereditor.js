@@ -968,6 +968,7 @@ highed.DrawerEditor = function(parent, options, planCode) {
       hideLiveStatus: function() {} //toolbox.hideLiveStatus
     },
     //dataTable: dataTable,
-    toolbar: toolbar
+    toolbar: toolbar,
+    toolboxEntries: toolboxEntries,
   };
 };

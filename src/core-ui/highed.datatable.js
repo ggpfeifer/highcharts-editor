@@ -523,7 +523,8 @@ highed.DataTable = function(parent, attributes) {
 
   // Handle drag 'n drop of files
   function handleFileUpload(f, cb) {
-    if (f.type !== 'text/csv') {
+    //if (f.type !== 'text/csv') {
+   if (['text/csv', 'application/vnd.ms-excel'].indexOf(f.type) === -1) {	// bna
       return highed.snackBar('The file is not a valid CSV file');
     }
 

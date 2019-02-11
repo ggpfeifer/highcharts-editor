@@ -799,6 +799,7 @@ highed.DrawerEditor = function(parent, options) {
       hideLiveStatus: toolbox.hideLiveStatus
     },
     dataTable: dataTable,
-    toolbar: toolbar
+    toolbar: toolbar,
+    toolboxEntries: toolboxEntries,
   };
 };

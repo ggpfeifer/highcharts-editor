@@ -89,6 +89,10 @@
         function openHighChartsEditor (index) {
             indexDataviewSelected = index;
             modalEditor.editor.chart.data.json(charts[index].obj);
+            try {
+                modalEditor.editor.toolboxEntries.templates.forceCollapse();
+                modalEditor.editor.toolboxEntries.customize.forceCollapse();
+            } catch (e) {}
             modalEditor.show();
         }
         window.openHighChartsEditor = openHighChartsEditor;

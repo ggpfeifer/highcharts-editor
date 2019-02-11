@@ -68,7 +68,7 @@ highed.OverlayModal = function(contents, attributes) {
   /** Show the modal
      *  @memberof highed.OverlayModal
      */
-  function show() {
+  function show(fn) {
     if (visible) return;
 
     highed.dom.style(container, {
@@ -103,6 +103,12 @@ highed.OverlayModal = function(contents, attributes) {
     window.setTimeout(function() {
       events.emit('Show');
     }, 300);
+
+    if (fn && typeof fn === "function") {
+        window.setTimeout(function() {
+            fn();
+        }, 300);
+    }
 
     visible = true;
   }

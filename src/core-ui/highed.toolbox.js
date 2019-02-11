@@ -204,6 +204,16 @@ highed.Toolbox = function(parent, attr) {
       }
     }
 
+    function forceCollapse() {
+        collapse();
+        disselect();
+        expanded = false;
+        activeItem = false;
+        highed.dom.style(helpIcon, {
+            display: 'none'
+        });
+    }
+
     function toggle() {
       if (activeItem === exports) {
         collapse();
@@ -243,6 +253,7 @@ highed.Toolbox = function(parent, attr) {
       on: entryEvents.on,
       expand: expand,
       collapse: collapse,
+      forceCollapse: forceCollapse,
       body: userContents,
       disselect: disselect
     };

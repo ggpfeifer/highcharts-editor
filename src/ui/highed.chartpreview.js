@@ -520,11 +520,15 @@ highed.ChartPreview = function(parent, attributes) {
     highed.clearObj(templateOptions);
 
     if (customizedOptions.xAxis) {
-      delete customizedOptions.xAxis;
+      //delete customizedOptions.xAxis; //is necessary delete xAxis? (remove categories)
     }
 
     if (customizedOptions.yAxis) {
-      delete customizedOptions.yAxis;
+      //delete customizedOptions.yAxis;
+    }
+
+    if (customizedOptions.chart) {
+        delete customizedOptions.chart;
     }
 
     // highed.setAttr(customizedOptions, 'series', []);

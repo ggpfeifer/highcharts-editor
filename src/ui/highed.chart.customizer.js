@@ -48,7 +48,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 highed.ChartCustomizer = function(parent, attributes, chartPreview) {
   var properties = highed.merge(
       {
-        noAdvanced: false,
+        noAdvanced: true,
         noCustomCode: false,
         noPreview: false,
         availableSettings: []

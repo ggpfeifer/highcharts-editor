@@ -115,7 +115,7 @@ highed.DrawerEditor = function(parent, options) {
     ),
     // Toolbar buttons
     toolbarButtons = [
-      {
+      /*{
         title: highed.L('newChart'),
         css: 'fa-file',
         click: function() {
@@ -173,7 +173,7 @@ highed.DrawerEditor = function(parent, options) {
           highed.cloud.showUI(chartPreview);
         }
       },
-      '-',
+      '-',*/
       {
         title: 'Help',
         css: 'fa-question-circle',

@@ -687,7 +687,7 @@ highed.DrawerEditor = function(parent, options) {
     highed.dom.ap(
       chartFrame,
 
-      highed.dom.ap(
+      /*highed.dom.ap(
         resPreviewBar,
         highed.dom.cr('div', 'highed-res-headline', 'Size Preview:'),
         resQuickSelContainer,
@@ -697,7 +697,7 @@ highed.DrawerEditor = function(parent, options) {
           highed.dom.cr('span', '', 'x'),
           resHeight
         )
-      ),
+      ),*/
 
       chartContainer,
       highed.dom.ap(errorBar, errorBarHeadline, errorBarBody)
@@ -737,13 +737,13 @@ highed.DrawerEditor = function(parent, options) {
     });
   }
 
-  resQuickSel.addItem({
+  /*resQuickSel.addItem({
     id: 'actual',
     title: 'Actual Size',
     select: function() {
       setToActualSize();
     }
-  });
+  });*/
 
   chartPreview.on('AttrChange', function(option) {
     if (option.id === 'chart.height' || option.id === 'chart.width') {

@@ -188,5 +188,15 @@ app.get('/test-angular', function (req, res) {
     });
 });
 
+app.get('/multiple', function (req, res) {
+    updateFiles();
+
+    res.render('multiple', {
+        scripts: files,
+        package: package,
+        title: 'Highcharts Editor - Multiple Modal'
+    });
+});
+
 console.log('starting on port', port);
 app.listen(port);

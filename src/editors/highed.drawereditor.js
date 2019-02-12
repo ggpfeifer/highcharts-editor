@@ -45,7 +45,8 @@ highed.DrawerEditor = function(parent, options) {
         importer: {},
         dataGrid: {},
         customizer: {},
-        toolbarIcons: []
+        toolbarIcons: [],
+        imagePath: ""
       },
       options
     ),
@@ -193,7 +194,7 @@ highed.DrawerEditor = function(parent, options) {
         help: [
           {
             title: 'Manually Add/Edit Data',
-            gif: 'dataImport.gif',
+            gif: properties.imagePath + 'dataImport.gif',
             description: [
               'Click a cell to edit its contents.<br/><br/>',
               'The cells can be navigated using the arrow keys.<br/><br/>',
@@ -202,7 +203,7 @@ highed.DrawerEditor = function(parent, options) {
           },
           {
             title: 'Setting headings',
-            gif: 'dataImport.gif',
+            gif: properties.imagePath + 'dataImport.gif',
             description: [
               'The headings are used as the series titles.<br/><br/>',
               'They can be edited by left clicking them.<br/><br/>',

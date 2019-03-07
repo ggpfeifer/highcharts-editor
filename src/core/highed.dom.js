@@ -342,7 +342,30 @@ highed.dom = {
       y: node.offsetTop
     };
   },
+  /**
+   * ignore window Scroll to obtain position
+   * @namespace highed.dom
+   * @param node {object} - the node to get the position of
+   * @param abs {boolean} - absolute calculation rather than parent relative
+   * @return {object} - the position as an object `{x, y}`
+   */
+  posWithoutWindowScroll: function(node, abs) {
+        var x = 0,
+            y = 0;
 
+        if (abs) {
+            var b = node.getBoundingClientRect();
+
+            return {
+                x: b.left,
+                y: b.top
+            };
+        }
+        return {
+            x: node.offsetLeft,
+            y: node.offsetTop
+        };
+  },
   /** Find a node
      * @namespace highed.dom
      * @param node {object} - the node to find. Either a string or an actual node instance

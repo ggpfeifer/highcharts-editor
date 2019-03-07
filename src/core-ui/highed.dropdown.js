@@ -92,7 +92,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     function expand(e) {
       buildDOM();
 
-      var pos = highed.dom.pos(container, true),
+      var pos = highed.dom.posWithoutWindowScroll(container, true),
         s = highed.dom.size(container);
 
       //Quick hack for IE...
